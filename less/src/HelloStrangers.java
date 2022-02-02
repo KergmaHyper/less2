@@ -1,5 +1,3 @@
-package edu.org.test1;
-
 import java.util.Scanner;
 
 public class HelloStrangers {
