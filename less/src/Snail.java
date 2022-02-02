@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import javax.swing.plaf.synth.SynthStyle;
-
 public class Snail {
 
     public static void main(String[] args) {
@@ -10,18 +8,20 @@ public class Snail {
         int b = scanner.nextInt();
         int h = scanner.nextInt();
         scanner.close();
+        if (a > b) {
+            int hDay = 0;
+            int countDays = 0;
 
-        int hDay = 0;
-        int countDays = 0;
+            do {
+                if (countDays > 0)
+                    hDay -= b;
+                countDays++;
+                hDay += a;
+            } while (hDay < h);
 
-        do {
-            if (countDays > 0)
-                hDay -= b;
-            countDays++;
-            hDay += a;
-        } while (hDay < h);
-
-        System.out.println(countDays);
-
+            System.out.println(countDays);
+        } else {
+            System.out.println("Impossible");
+        }
     }
 }
