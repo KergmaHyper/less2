@@ -9,7 +9,6 @@ public class QuadraticEquation {
         float b = scanner.nextFloat();
         float c = scanner.nextFloat();
         scanner.close();
-
         float D = b * b - 4 * a * c;
         if (D < 0) {
             System.out.println("no roots");
